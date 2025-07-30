@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://xjwggrrf7pqi"]
+
+[ext_resource type="Script" uid="uid://cfsjllr6aic0e" path="res://MenuScripts/exit_button.gd" id="1_ayhgx"]
+
+[node name="ExitButton" type="Button"]
+theme_override_colors/font_pressed_color = Color(0, 0, 0.8, 1)
+theme_override_font_sizes/font_size = 40
+text = "EXIT"
+script = ExtResource("1_ayhgx")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

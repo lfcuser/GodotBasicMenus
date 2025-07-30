@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://hu4n5rhxvl1f"]
+
+[ext_resource type="Script" uid="uid://c0huraijpiahu" path="res://MenuScripts/levels_menu.gd" id="1_luk2w"]
+[ext_resource type="Texture2D" uid="uid://h6534fyik1qj" path="res://MenuAssets/main_menu_bg.png" id="1_q5akm"]
+
+[node name="LevelsMenu" type="Node"]
+script = ExtResource("1_luk2w")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q5akm")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 24.0
+offset_right = 236.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 40
+text = "Esc to back"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -246.0
+offset_top = -102.0
+offset_right = 8.0
+offset_bottom = -28.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 11
+theme_override_constants/v_separation = 11
+columns = 2
+
+[node name="Lvl1Button" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("1_q5akm")
+
+[node name="Lvl2Button" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("1_q5akm")
+
+[node name="Lvl3Button" type="Button" parent="ScrollContainer/GridContainer"]
+layout_mode = 2
+icon = ExtResource("1_q5akm")

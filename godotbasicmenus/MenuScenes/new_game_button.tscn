@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://1iv2vksu3gkx"]
+
+[ext_resource type="Script" uid="uid://dg0pccjr6uclm" path="res://MenuScripts/new_game_button.gd" id="1_meekp"]
+
+[node name="NewGameButton" type="Button"]
+theme_override_colors/font_pressed_color = Color(0, 0, 0.8, 1)
+theme_override_font_sizes/font_size = 40
+text = "NEW GAME"
+script = ExtResource("1_meekp")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

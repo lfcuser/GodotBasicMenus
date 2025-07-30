@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://sn6ie6kxr5mm"]
+
+[ext_resource type="Script" uid="uid://jmyybq2xr6sr" path="res://MenuScripts/settings.gd" id="1_0ec0d"]
+[ext_resource type="Texture2D" uid="uid://h6534fyik1qj" path="res://MenuAssets/main_menu_bg.png" id="1_iq1c3"]
+
+[node name="Settings" type="Node"]
+script = ExtResource("1_0ec0d")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iq1c3")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 24.0
+offset_right = 236.0
+offset_bottom = 79.0
+theme_override_font_sizes/font_size = 40
+text = "Esc to back"

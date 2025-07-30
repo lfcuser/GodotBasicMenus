@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cd7yb4pb62r1h"]
+
+[node name="SavesButton" type="Button"]
+theme_override_colors/font_pressed_color = Color(0, 0, 0.8, 1)
+theme_override_font_sizes/font_size = 40
+text = "SAVES"
