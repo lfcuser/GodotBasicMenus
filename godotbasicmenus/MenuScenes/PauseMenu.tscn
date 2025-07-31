@@ -1,3 +1,44 @@
-[gd_scene format=3 uid="uid://dr7w6fmqxry48"]
+[gd_scene load_steps=6 format=3 uid="uid://dr7w6fmqxry48"]
+
+[ext_resource type="Texture2D" uid="uid://h6534fyik1qj" path="res://MenuAssets/main_menu_bg.png" id="1_0tu2y"]
+[ext_resource type="PackedScene" uid="uid://bb87xqp0o0thj" path="res://MenuScenes/restart_button.tscn" id="3_0tu2y"]
+[ext_resource type="PackedScene" uid="uid://c6ovb5ui44ya8" path="res://MenuScenes/continue_button.tscn" id="3_aj47c"]
+[ext_resource type="PackedScene" uid="uid://shi73j2gqiw2" path="res://MenuScenes/settings_button.tscn" id="4_dkej7"]
+[ext_resource type="PackedScene" uid="uid://dsbvvilmouule" path="res://MenuScenes/exit_to_menu_button.tscn" id="5_if0l5"]
 
 [node name="PauseMenu" type="Node"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0tu2y")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -111.0
+offset_top = -165.5
+offset_right = 111.0
+offset_bottom = 165.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ContinueButton" parent="VBoxContainer" instance=ExtResource("3_aj47c")]
+layout_mode = 2
+
+[node name="RestartButton" parent="VBoxContainer" instance=ExtResource("3_0tu2y")]
+layout_mode = 2
+
+[node name="SettingsButton" parent="VBoxContainer" instance=ExtResource("4_dkej7")]
+layout_mode = 2
+
+[node name="ExitToMenuButton" parent="VBoxContainer" instance=ExtResource("5_if0l5")]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/SettingsButton" to="VBoxContainer/SettingsButton" method="_on_pressed"]

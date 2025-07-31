@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dsbvvilmouule"]
+
+[node name="ExitToMenuButton" type="Button"]
+theme_override_colors/font_pressed_color = Color(0, 0, 0.8, 1)
+theme_override_font_sizes/font_size = 40
+text = "EXIT TO MENU"

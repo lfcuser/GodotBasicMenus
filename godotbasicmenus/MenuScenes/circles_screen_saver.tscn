@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3xgbegsjflp5"]
+
+[ext_resource type="Script" uid="uid://dupx47tb21lhk" path="res://MenuScripts/CirclesScreenSaver.gd" id="1_67id2"]
+[ext_resource type="PackedScene" uid="uid://bsud8aqdp64yp" path="res://MenuScenes/Circle.tscn" id="2_5gpok"]
+
+[node name="CirclesScreenSaver" type="Node"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_67id2")
+
+[node name="Circle" parent="Control" instance=ExtResource("2_5gpok")]

@@ -1,11 +1,19 @@
-[gd_scene load_steps=7 format=3 uid="uid://c1esqi2rq2plj"]
+[gd_scene load_steps=11 format=3 uid="uid://c1esqi2rq2plj"]
 
 [ext_resource type="Texture2D" uid="uid://h6534fyik1qj" path="res://MenuAssets/main_menu_bg.png" id="1_qmcgc"]
 [ext_resource type="PackedScene" uid="uid://1iv2vksu3gkx" path="res://MenuScenes/new_game_button.tscn" id="2_awun6"]
+[ext_resource type="PackedScene" uid="uid://c3xgbegsjflp5" path="res://MenuScenes/circles_screen_saver.tscn" id="2_gregl"]
 [ext_resource type="PackedScene" uid="uid://c6ovb5ui44ya8" path="res://MenuScenes/continue_button.tscn" id="3_bjj1l"]
 [ext_resource type="PackedScene" uid="uid://shi73j2gqiw2" path="res://MenuScenes/settings_button.tscn" id="4_8madp"]
+[ext_resource type="FontFile" uid="uid://b0ohp2kujr23s" path="res://MenuAssets/StampatelloFaceto.otf" id="4_s4dy5"]
 [ext_resource type="PackedScene" uid="uid://cd7yb4pb62r1h" path="res://MenuScenes/saves_button.tscn" id="5_8madp"]
 [ext_resource type="PackedScene" uid="uid://xjwggrrf7pqi" path="res://MenuScenes/exit_button.tscn" id="6_iqiy7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s4dy5"]
+bg_color = Color(0.587034, 0.884085, 0.672992, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eh5cc"]
+bg_color = Color(4.69275e-07, 0.279636, 0.300849, 1)
 
 [node name="MainMenu" type="Node"]
 
@@ -16,6 +24,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_qmcgc")
+
+[node name="CirclesScreenSaver" parent="." instance=ExtResource("2_gregl")]
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 anchors_preset = 8
@@ -32,17 +42,27 @@ grow_vertical = 2
 
 [node name="NewGameButton" parent="VBoxContainer" instance=ExtResource("2_awun6")]
 layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxFlat_s4dy5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eh5cc")
 
 [node name="ContinueButton" parent="VBoxContainer" instance=ExtResource("3_bjj1l")]
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_s4dy5")
 
 [node name="SavesButton" parent="VBoxContainer" instance=ExtResource("5_8madp")]
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_s4dy5")
 
 [node name="SettingsButton" parent="VBoxContainer" instance=ExtResource("4_8madp")]
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_s4dy5")
 
 [node name="ExitButton" parent="VBoxContainer" instance=ExtResource("6_iqiy7")]
 layout_mode = 2
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_s4dy5")
 
 [connection signal="pressed" from="VBoxContainer/SettingsButton" to="VBoxContainer/SettingsButton" method="_on_pressed"]
